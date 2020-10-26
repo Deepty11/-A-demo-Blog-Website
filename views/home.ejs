@@ -1,0 +1,28 @@
+<%-include('partials/header')%>
+    <h1>Home</h1>
+    <div>
+        <p>
+            <%=Contents%>
+        </p>
+        <!-- <% for( let i=0;i< postContents.length;i++ ){%>
+            <h1>
+                <%=postContents[i].titleBody%>
+            </h1>
+            <p>
+                <%=postContents[i].postBody%>
+            </p>
+            <% }%> -->
+
+        <% postContents.forEach(function(event){%>
+            <h1>
+                <%=event.titleBody%>
+            </h1>
+            <p>
+                <%=event.postBody.substring(0,100)%>...<a href="/posts/<%=event.titleBody%>">Read More</a>
+            </p>
+            <% });%>
+
+    </div>
+
+
+    <%-include('partials/footer')%>
