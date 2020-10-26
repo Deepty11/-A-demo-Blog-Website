@@ -1,9 +1,18 @@
 <%-include('partials/header')%>
-    <h1>Home</h1>
-    <div>
-        <p>
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">
             <%=Contents%>
         </p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+    </div>
+
+    <div>
+
         <!-- <% for( let i=0;i< postContents.length;i++ ){%>
             <h1>
                 <%=postContents[i].titleBody%>
@@ -14,12 +23,15 @@
             <% }%> -->
 
         <% postContents.forEach(function(event){%>
-            <h1>
-                <%=event.titleBody%>
-            </h1>
-            <p>
-                <%=event.postBody.substring(0,100)%>...<a href="/posts/<%=event.titleBody%>">Read More</a>
-            </p>
+            <div class="blogs">
+                <h1>
+                    <%=event.titleBody%>
+                </h1>
+                <p>
+                    <%=event.postBody.substring(0,100)%>...<a href="/posts/<%=event.titleBody%>">Read More</a>
+                </p>
+            </div>
+
             <% });%>
 
     </div>
