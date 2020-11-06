@@ -25,10 +25,10 @@
         <% postContents.forEach(function(event){%>
             <div class="blogs">
                 <h1>
-                    <%=event.titleBody%>
+                    <%=event.name%>
                 </h1>
                 <p>
-                    <%=event.postBody.substring(0,100)%>...<a href="/posts/<%=event.titleBody%>">Read More</a>
+                    <%=event.desc.substring(0,100)%>...<a href="/posts/<%=event.name%>">Read More</a>
                 </p>
             </div>
 
